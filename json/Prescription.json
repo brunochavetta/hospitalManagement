@@ -1,0 +1,128 @@
+[{
+  "_id": {
+    "$oid": "66efcb7640d74b5ef6231f70"
+  },
+  "creationDate": "2024-09-23",
+  "dosage": "1000mg",
+  "frequency": "8 horas",
+  "treatmentDuration": "1 semana",
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": {
+      "$oid": "66ec46cd75745b4c3be32ace"
+    }
+  },
+  "patient": {
+    "$ref": "Patient",
+    "$id": {
+      "$oid": "66eb9e48169f1db08a7f43c6"
+    }
+  },
+  "medication": {
+    "$ref": "Medication",
+    "$id": {
+      "$oid": "66eca2065ac68f50b0cb6220"
+    }
+  },
+  "_class": "com.example.laboratory4.prescription.Prescription"
+},{
+  "_id": {
+    "$oid": "66f07bb83f1c92b82bc201e3"
+  },
+  "creationDate": "2024-09-01",
+  "dosage": "500mg",
+  "frequency": "Daily",
+  "treatmentDuration": "30 days",
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32acc"
+  },
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c4"
+  },
+  "medication": {
+    "$ref": "Medication",
+    "$id": "66eca2065ac68f50b0cb6220"
+  }
+},{
+  "_id": {
+    "$oid": "66f07bb83f1c92b82bc201e4"
+  },
+  "creationDate": "2024-09-05",
+  "dosage": "90mcg",
+  "frequency": "As needed",
+  "treatmentDuration": "30 days",
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32ace"
+  },
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c5"
+  },
+  "medication": {
+    "$ref": "Medication",
+    "$id": "66eca2065ac68f50b0cb6221"
+  }
+},{
+  "_id": {
+    "$oid": "66f07bb83f1c92b82bc201e5"
+  },
+  "creationDate": "2024-09-10",
+  "dosage": "400mg",
+  "frequency": "Every 6 hours as needed",
+  "treatmentDuration": "7 days",
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32ad0"
+  },
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c6"
+  },
+  "medication": {
+    "$ref": "Medication",
+    "$id": "66eca2065ac68f50b0cb6222"
+  }
+},{
+  "_id": {
+    "$oid": "66f07bb83f1c92b82bc201e6"
+  },
+  "creationDate": "2024-09-12",
+  "dosage": "10mg",
+  "frequency": "Daily",
+  "treatmentDuration": "30 days",
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32acc"
+  },
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c7"
+  },
+  "medication": {
+    "$ref": "Medication",
+    "$id": "66eca2065ac68f50b0cb6223"
+  }
+},{
+  "_id": {
+    "$oid": "66f07bb83f1c92b82bc201e7"
+  },
+  "creationDate": "2024-09-15",
+  "dosage": "1%",
+  "frequency": "Apply twice daily",
+  "treatmentDuration": "2 weeks",
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32ad0"
+  },
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c8"
+  },
+  "medication": {
+    "$ref": "Medication",
+    "$id": "66eca2065ac68f50b0cb6224"
+  }
+}]

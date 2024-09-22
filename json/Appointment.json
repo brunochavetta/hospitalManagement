@@ -1,0 +1,123 @@
+[{
+  "_id": {
+    "$oid": "66edf3e888c866694a164cbe"
+  },
+  "appointmentDate": "2024-10-05",
+  "appointmentTime": "16:00",
+  "appointmentReason": "control",
+  "status": "Confirmed",
+  "patient": {
+    "$ref": "Patient",
+    "$id": {
+      "$oid": "66eb9e48169f1db08a7f43c4"
+    }
+  },
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": {
+      "$oid": "66ec46cd75745b4c3be32acc"
+    }
+  },
+  "_class": "com.example.laboratory4.appointment.Appointment"
+},{
+  "_id": {
+    "$oid": "66edfec088c866694a164cbf"
+  },
+  "appointmentDate": "2024-10-05",
+  "appointmentTime": "17:00",
+  "appointmentReason": "control",
+  "status": "Confirmed",
+  "patient": {
+    "$ref": "Patient",
+    "$id": {
+      "$oid": "66eb9e48169f1db08a7f43c6"
+    }
+  },
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": {
+      "$oid": "66ec46cd75745b4c3be32acd"
+    }
+  },
+  "_class": "com.example.laboratory4.appointment.Appointment"
+},{
+  "_id": {
+    "$oid": "66f079643f1c92b82bc201c7"
+  },
+  "appointmentDate": "2024-09-10",
+  "appointmentTime": "09:00",
+  "appointmentReason": "Routine check-up",
+  "status": "Scheduled",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c4"
+  },
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32acc"
+  }
+},{
+  "_id": {
+    "$oid": "66f079643f1c92b82bc201c8"
+  },
+  "appointmentDate": "2024-09-12",
+  "appointmentTime": "14:00",
+  "appointmentReason": "Pediatric consultation",
+  "status": "Completed",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c5"
+  },
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32acf"
+  }
+},{
+  "_id": {
+    "$oid": "66f079643f1c92b82bc201c9"
+  },
+  "appointmentDate": "2024-09-15",
+  "appointmentTime": "10:00",
+  "appointmentReason": "Orthopedic evaluation",
+  "status": "Scheduled",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c6"
+  },
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32ace"
+  }
+},{
+  "_id": {
+    "$oid": "66f079643f1c92b82bc201ca"
+  },
+  "appointmentDate": "2024-09-18",
+  "appointmentTime": "13:00",
+  "appointmentReason": "Neurological assessment",
+  "status": "Completed",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c7"
+  },
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32acd"
+  }
+},{
+  "_id": {
+    "$oid": "66f079643f1c92b82bc201cb"
+  },
+  "appointmentDate": "2024-09-20",
+  "appointmentTime": "11:00",
+  "appointmentReason": "Dermatology consultation",
+  "status": "Scheduled",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c8"
+  },
+  "doctor": {
+    "$ref": "Doctor",
+    "$id": "66ec46cd75745b4c3be32ad0"
+  }
+}]

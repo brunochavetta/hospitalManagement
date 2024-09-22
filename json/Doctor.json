@@ -1,0 +1,51 @@
+[{
+  "_id": {
+    "$oid": "66ec46cd75745b4c3be32acc"
+  },
+  "fullName": "Dr. Bruno Chavetta",
+  "specialty": "Cardiology",
+  "licenseNumber": "LIC12345",
+  "yearsOfExperience": 10,
+  "officeHours": "Mon-Fri 9am-5pm",
+  "office": "Room 101"
+},{
+  "_id": {
+    "$oid": "66ec46cd75745b4c3be32acd"
+  },
+  "fullName": "Dra. Azul Ventura",
+  "specialty": "Neurology",
+  "licenseNumber": "LIC67890",
+  "yearsOfExperience": 8,
+  "officeHours": "Mon-Fri 8am-4pm",
+  "office": "Room 202"
+},{
+  "_id": {
+    "$oid": "66ec46cd75745b4c3be32ace"
+  },
+  "fullName": "Dr. Guido Mamani",
+  "specialty": "Orthopedics",
+  "licenseNumber": "LIC54321",
+  "yearsOfExperience": 12,
+  "officeHours": "Mon-Fri 10am-6pm",
+  "office": "Room 303"
+},{
+  "_id": {
+    "$oid": "66ec46cd75745b4c3be32acf"
+  },
+  "fullName": "Dr. Leandro Paredes",
+  "specialty": "Pediatrics",
+  "licenseNumber": "LIC98765",
+  "yearsOfExperience": 15,
+  "officeHours": "Mon-Fri 10am-4pm",
+  "office": "Room 404"
+},{
+  "_id": {
+    "$oid": "66ec46cd75745b4c3be32ad0"
+  },
+  "fullName": "Dra. Mariana Espósito",
+  "specialty": "Dermatology",
+  "licenseNumber": "LIC13579",
+  "yearsOfExperience": 7,
+  "officeHours": "Mon-Fri 8am-2pm",
+  "office": "Room 505"
+}]

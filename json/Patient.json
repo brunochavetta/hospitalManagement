@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "66eb9e48169f1db08a7f43c4"
+  },
+  "fullName": "Teresita Sanchez",
+  "dateOfBirth": "1945-07-24",
+  "gender": "Female",
+  "address": "123 Elm Street, Springfield",
+  "phone": "555-1234",
+  "insuranceNumber": "INS1234567890",
+  "medicalHistory": "No significant history",
+  "allergies": "None",
+  "bloodType": "O+"
+},{
+  "_id": {
+    "$oid": "66eb9e48169f1db08a7f43c5"
+  },
+  "fullName": "Agustin De Luca",
+  "dateOfBirth": "1998-03-15",
+  "gender": "Male",
+  "address": "456 Oak Avenue, Springfield",
+  "phone": "555-5678",
+  "insuranceNumber": "INS9876543210",
+  "medicalHistory": "Asthma",
+  "allergies": "Penicillin",
+  "bloodType": "A-"
+},{
+  "_id": {
+    "$oid": "66eb9e48169f1db08a7f43c6"
+  },
+  "fullName": "Bob Marley",
+  "dateOfBirth": "1945-02-06",
+  "gender": "Male",
+  "address": "789 Pine Road, Canada",
+  "phone": "555-8765",
+  "insuranceNumber": "INS1122334455",
+  "medicalHistory": "Diabetes",
+  "allergies": "None",
+  "bloodType": "B+"
+},{
+  "_id": {
+    "$oid": "66eb9e48169f1db08a7f43c7"
+  },
+  "fullName": "Lionel Messi",
+  "dateOfBirth": "1987-06-24",
+  "gender": "Male",
+  "address": "101 Maple Lane, Springfield",
+  "phone": "555-4321",
+  "insuranceNumber": "INS5544332211",
+  "medicalHistory": "Hypertension",
+  "allergies": "Sulfa drugs",
+  "bloodType": "AB+"
+},{
+  "_id": {
+    "$oid": "66eb9e48169f1db08a7f43c8"
+  },
+  "fullName": "Adele Laurie",
+  "dateOfBirth": "1988-05-05",
+  "gender": "Other",
+  "address": "202 Cedar Street, Springfield",
+  "phone": "555-6789",
+  "insuranceNumber": "INS6677889900",
+  "medicalHistory": "No significant history",
+  "allergies": "None",
+  "bloodType": "O-"
+},{
+  "_id": {
+    "$oid": "66ebbf26f082e15431283bd6"
+  },
+  "fullName": "Valentin Coria",
+  "dateOfBirth": "2000-02-05",
+  "gender": "Male",
+  "address": "Calle falsa 125",
+  "phone": "35987456",
+  "insuranceNumber": "B6985478",
+  "medicalHistory": "no",
+  "allergies": "no",
+  "bloodType": "B+",
+  "_class": "com.example.laboratory4.Patients.Patient"
+}]

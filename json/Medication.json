@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "66eca2065ac68f50b0cb6220"
+  },
+  "name": "Aspirin",
+  "presentation": "Tablet",
+  "dosage": "500mg",
+  "instructions": "Take one tablet daily",
+  "contraindications": "Allergy to aspirin"
+},{
+  "_id": {
+    "$oid": "66eca2065ac68f50b0cb6221"
+  },
+  "name": "Ventolin",
+  "presentation": "Inhaler",
+  "dosage": "90mcg",
+  "instructions": "Use as needed for asthma",
+  "contraindications": "No known contraindications"
+},{
+  "_id": {
+    "$oid": "66eca2065ac68f50b0cb6222"
+  },
+  "name": "Ibuprofen",
+  "presentation": "Tablet",
+  "dosage": "400mg",
+  "instructions": "Take one tablet every 6 hours as needed",
+  "contraindications": "Peptic ulcer disease"
+},{
+  "_id": {
+    "$oid": "66eca2065ac68f50b0cb6223"
+  },
+  "name": "Lisinopril",
+  "presentation": "Tablet",
+  "dosage": "10mg",
+  "instructions": "not instructions",
+  "contraindications": "Pregnancy"
+},{
+  "_id": {
+    "$oid": "66eca2065ac68f50b0cb6224"
+  },
+  "name": "Hydrocortisone",
+  "presentation": "Cream",
+  "dosage": "1%",
+  "instructions": "Apply to affected area twice daily",
+  "contraindications": "Skin infections"
+},{
+  "_id": {
+    "$oid": "66eca44a88c866694a164a15"
+  },
+  "name": "Amoxicilina",
+  "presentation": "pastilla",
+  "dosage": "10mg",
+  "instruction": "tomar cada 24 horas",
+  "contraindications": "malestar estomacal",
+  "_class": "com.example.laboratory4.medication.Medication"
+}]

@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "66efba1a8439e40bfb3f23e2"
+  },
+  "creationDate": "2024-09-22",
+  "doctorNotes": "Paciente vino por dolor estomacal, se realizaron ecografía y análisis de sangre",
+  "diagnoses": "malestar estomacal",
+  "testResults": "Los resultado derivan a que no hay complicaciones",
+  "prescriptions": "dieta",
+  "patient": {
+    "$ref": "Patient",
+    "$id": {
+      "$oid": "66eb9e48169f1db08a7f43c7"
+    }
+  },
+  "_class": "com.example.laboratory4.medicalHistory.MedicalHistory"
+},{
+  "_id": {
+    "$oid": "66f07a7b3f1c92b82bc201d4"
+  },
+  "creationDate": "2024-09-01",
+  "doctorNotes": "Patient shows no abnormal symptoms.",
+  "diagnoses": "Healthy",
+  "testResults": "No tests performed",
+  "prescriptions": "No prescriptions",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c4"
+  }
+},{
+  "_id": {
+    "$oid": "66f07a7b3f1c92b82bc201d5"
+  },
+  "creationDate": "2024-09-05",
+  "doctorNotes": "Asthma under control with current medication.",
+  "diagnoses": "Asthma",
+  "testResults": "Normal",
+  "prescriptions": "Continue current medication",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c5"
+  }
+},{
+  "_id": {
+    "$oid": "66f07a7b3f1c92b82bc201d6"
+  },
+  "creationDate": "2024-09-10",
+  "doctorNotes": "Patient reports joint pain.",
+  "diagnoses": "Arthritis",
+  "testResults": "X-Ray pending",
+  "prescriptions": "Pain relief medication",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c6"
+  }
+},{
+  "_id": {
+    "$oid": "66f07a7b3f1c92b82bc201d7"
+  },
+  "creationDate": "2024-09-12",
+  "doctorNotes": "Neurological symptoms observed.",
+  "diagnoses": "Migraines",
+  "testResults": "CT scan scheduled",
+  "prescriptions": "Pain relief and migraine medication",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c7"
+  }
+},{
+  "_id": {
+    "$oid": "66f07a7b3f1c92b82bc201d8"
+  },
+  "creationDate": "2024-09-15",
+  "doctorNotes": "Patient has skin rash.",
+  "diagnoses": "Dermatitis",
+  "testResults": "Skin test pending",
+  "prescriptions": "Topical cream prescribed",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c8"
+  }
+}]

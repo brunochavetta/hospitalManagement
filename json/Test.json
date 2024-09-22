@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "66efe5d040d74b5ef623203c"
+  },
+  "testType": "Análisis de sangre",
+  "testDescription": "Pedido de análisis de sangre para comprobar embarazo",
+  "results": "La paciente no está embarazada",
+  "testDate": "2024-09-06",
+  "patient": {
+    "$ref": "Patient",
+    "$id": {
+      "$oid": "66eb9e48169f1db08a7f43c4"
+    }
+  },
+  "_class": "com.example.laboratory4.test.Test"
+},{
+  "_id": {
+    "$oid": "66f07c393f1c92b82bc201eb"
+  },
+  "testType": "Blood Test",
+  "testDescription": "Routine blood test for health check",
+  "results": "Normal",
+  "testDate": "2024-08-30",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c4"
+  }
+},{
+  "_id": {
+    "$oid": "66f07c393f1c92b82bc201ec"
+  },
+  "testType": "X-Ray",
+  "testDescription": "Chest X-Ray to evaluate respiratory health",
+  "results": "Clear",
+  "testDate": "2024-09-02",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c5"
+  }
+},{
+  "_id": {
+    "$oid": "66f07c393f1c92b82bc201ed"
+  },
+  "testType": "MRI",
+  "testDescription": "MRI of the knee joint",
+  "results": "Showed inflammation",
+  "testDate": "2024-09-05",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c6"
+  }
+},{
+  "_id": {
+    "$oid": "66f07c393f1c92b82bc201ee"
+  },
+  "testType": "CT Scan",
+  "testDescription": "CT scan of the brain",
+  "results": "Normal",
+  "testDate": "2024-09-08",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c7"
+  }
+},{
+  "_id": {
+    "$oid": "66f07c393f1c92b82bc201ef"
+  },
+  "testType": "Skin Test",
+  "testDescription": "Test for skin allergies",
+  "results": "Pending",
+  "testDate": "2024-09-12",
+  "patient": {
+    "$ref": "Patient",
+    "$id": "66eb9e48169f1db08a7f43c8"
+  }
+}]

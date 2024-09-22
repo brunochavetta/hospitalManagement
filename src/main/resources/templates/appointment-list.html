@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>List of Appointments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/png" th:href="@{/img/favicon.ico}">
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <img th:src="@{/img/logo.png}" alt="Logo" width="40" height="32"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none" />
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li><a href="/" class="nav-link text-secondary">Home</a></li>
+                        <li><a href="/patients" class="nav-link text-white">Patients</a></li>
+                        <li><a href="/doctors" class="nav-link text-white">Doctors</a></li>
+                        <li><a href="/appointments" class="nav-link text-white">Appointments</a></li>
+                        <li><a href="/medications" class="nav-link text-white">Medications</a></li>
+                        <li><a href="/prescriptions" class="nav-link text-white">Prescriptions</a></li>
+                        <li><a href="/tests" class="nav-link text-white">Tests</a></li>
+                        <li><a href="/medicalHistorys" class="nav-link text-white">Medical Historys</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br><br>
+
+    <div class="container">
+        <h1>Appointments</h1>
+        <table class="table">
+            <caption>List of Appointments</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Appointment Date</th>
+                    <th scope="col">Appointment Time</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Patient Full Name</th>
+                    <th scope="col">Doctor Full Name</th>
+                    <th cope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr scope="row" th:each="appointment : ${appointments}">
+                    <td th:text="${appointment.appointmentDate}"></td>
+                    <td th:text="${appointment.appointmentTime}"></td>
+                    <td th:text="${appointment.status}"></td>
+                    <td th:text="${appointment.patient != null ? appointment.patient.fullName : 'No Patient'}"></td>
+                    <td th:text="${appointment.doctor != null ? appointment.doctor.fullName : 'No Doctor'}"></td>
+                    <td>
+                        <a th:href="@{/appointments/{id}(id=${appointment.id})}" class="link-info">View</a>
+                        |
+                        <a th:href="@{/appointments/delete/{id}(id=${appointment.id})}" class="link-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="#" method="get" th:action="@{/appointments}" class="row g-3 ms-auto" style="max-width: 700px;">
+            <div class="col-auto">
+                <legend>Filter</legend>
+            </div>
+            <div class="col-auto">
+                <label for="option" class="visually-hidden">Select Option:</label>
+                <select id="option" name="option" class="form-select" onchange="toggleFields()">
+                    <option value="1" th:selected="${filterOption == 1}">ID</option>
+                    <option value="2" th:selected="${filterOption == 2}">Date</option>
+                    <option value="3" th:selected="${filterOption == 3}">Time</option>
+                    <option value="4" th:selected="${filterOption == 4}">Reason</option>
+                    <option value="5" th:selected="${filterOption == 5}">Status</option>
+                    <option value="6" th:selected="${filterOption == 6}">Patient Full Name</option>
+                    <option value="7" th:selected="${filterOption == 7}">Doctor Full Name</option>
+                    <option value="8" th:selected="${filterOption == 8}">All Appointments</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <label for="search" class="visually-hidden">Search:</label>
+                <input type="text" id="search" name="search" th:value="${searchTerm}" class="form-control"
+                    placeholder="Enter filter here" />
+            </div>
+            <div class="col-auto">
+                <button id="filterButton" type="submit" class="btn btn-primary">Filter</button>
+            </div>
+        </form>
+
+        <div id="patientFields" class="col-12" style="display:none;">
+            <div class="input-group has-validation mb-3">
+                <div class="d-flex align-items-center flex-grow-1">
+                    <div class="form-floating me-2 flex-grow-1">
+                        <input type="text" id="searchInputPatient" class="form-control"
+                            placeholder="Patient Full Name" />
+                        <label for="searchInputPatient" class="form-label">Patient Full Name</label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary" onclick="searchPatients()">Search Patients</button>
+                </div>
+            </div>
+            <div id="patientList" class="list-group" style="display: none;"></div>
+        </div>
+
+        <div id="doctorFields" class="col-12" style="display:none;">
+            <div class="input-group has-validation mb-3">
+                <div class="d-flex align-items-center flex-grow-1">
+                    <div class="form-floating me-2 flex-grow-1">
+                        <input type="text" id="searchInputDoctor" class="form-control" placeholder="Doctor Full Name" />
+                        <label for="searchInputDoctor" class="form-label">Doctor Full Name</label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary" onclick="searchDoctors()">Search Doctors</button>
+                </div>
+            </div>
+            <div id="doctorList" class="list-group" style="display: none;"></div>
+        </div>
+
+        <br><br>
+        <a href="/appointments/new" class="btn btn-success">Add New Appointment</a>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+        <script>
+            function toggleFields() {
+                const option = document.getElementById('option').value;
+                console.log("Selected option: ", option);
+                const patientFields = document.getElementById('patientFields');
+                const doctorFields = document.getElementById('doctorFields');
+
+                patientFields.style.display = 'none';
+                doctorFields.style.display = 'none';
+
+                if (option == '6') {
+                    patientFields.style.display = 'block';
+                } else if (option == '7') {
+                    doctorFields.style.display = 'block';
+                }
+            }
+
+            function searchPatients() {
+                const searchInput = document.getElementById('searchInputPatient').value;
+
+                fetch(`/appointments/search/patients?option=2&search=${encodeURIComponent(searchInput)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const patientList = document.getElementById('patientList');
+                        patientList.innerHTML = '';
+
+                        data.forEach(patient => {
+                            const item = document.createElement('div');
+                            item.className = 'list-group-item d-flex justify-content-between align-items-center';
+                            item.textContent = `${patient.fullName} (Insurance No: ${patient.insuranceNumber})`;
+
+                            const button = document.createElement('button');
+                            button.className = 'btn btn-sm btn-primary';
+                            button.textContent = 'Select';
+                            button.onclick = () => {
+                                if (patient && patient.id) {
+                                    console.log("patient", patient);
+                                    console.log(patient.id.toString());
+                                    document.getElementById('search').value = patient.id.toString();
+                                    patientList.innerHTML = '';
+                                } else {
+                                    console.error('patient or patient._id is undefined');
+                                }
+                            };
+
+
+                            item.appendChild(button);
+                            patientList.appendChild(item);
+                        });
+
+                        patientList.style.display = 'block';
+                    })
+                    .catch(error => console.error('Error fetching patients:', error));
+            }
+
+
+            function searchDoctors() {
+                const searchInput = document.getElementById('searchInputDoctor').value;
+
+                fetch(`/appointments/search/doctors?option=2&search=${encodeURIComponent(searchInput)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const doctorList = document.getElementById('doctorList');
+                        doctorList.innerHTML = '';
+
+                        data.forEach(doctor => {
+                            const item = document.createElement('div');
+                            item.className = 'list-group-item d-flex justify-content-between align-items-center';
+                            item.textContent = `${doctor.fullName} (License No: ${doctor.licenseNumber})`;
+
+                            const button = document.createElement('button');
+                            button.className = 'btn btn-sm btn-primary';
+                            button.textContent = 'Select';
+                            button.onclick = () => {
+                                if (doctor && doctor.id !== undefined) {
+                                    console.log(doctor.id.toString());
+                                    document.getElementById('search').value = doctor.id.toString();
+                                    doctorList.innerHTML = '';
+                                } else {
+                                    console.error('doctor or doctor.id is undefined');
+                                }
+                            };
+
+                            item.appendChild(button);
+                            doctorList.appendChild(item);
+                        });
+
+                        doctorList.style.display = 'block';
+                    })
+                    .catch(error => console.error('Error fetching doctors:', error));
+            }
+        </script>
+    </div>
+</body>
+
+</html>

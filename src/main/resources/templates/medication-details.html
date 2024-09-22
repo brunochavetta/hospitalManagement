@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Medication Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" type="image/png" th:href="@{/img/favicon.ico}">
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <img th:src="@{/img/logo.png}" alt="Logo" width="40" height="32"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none" />
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li><a href="/" class="nav-link text-secondary">Home</a></li>
+                        <li><a href="/patients" class="nav-link text-white">Patients</a></li>
+                        <li><a href="/doctors" class="nav-link text-white">Doctors</a></li>
+                        <li><a href="/appointments" class="nav-link text-white">Appointments</a></li>
+                        <li><a href="/medications" class="nav-link text-white">Medications</a></li>
+                        <li><a href="/prescriptions" class="nav-link text-white">Prescriptions</a></li>
+                        <li><a href="/tests" class="nav-link text-white">Tests</a></li>
+                        <li><a href="/medicalHistorys" class="nav-link text-white">Medical Historys</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br><br>
+
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Medication Details</h1>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th>ID:</th>
+                    <td th:text="${medication.id}"></td>
+                </tr>
+                <tr>
+                    <th>Name:</th>
+                    <td th:text="${medication.name}"></td>
+                </tr>
+                <tr>
+                    <th>Presentation:</th>
+                    <td th:text="${medication.presentation}"></td>
+                </tr>
+                <tr>
+                    <th>Dosage:</th>
+                    <td th:text="${medication.dosage}"></td>
+                </tr>
+                <tr>
+                    <th>Instructions:</th>
+                    <td th:text="${medication.instruction}"></td>
+                </tr>
+                <tr>
+                    <th>Contraindications:</th>
+                    <td th:text="${medication.contraindications}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Link to edit the medication details -->
+        <a th:href="@{/medications/edit/{id}(id=${medication.id})}" class="btn btn-primary">Edit Medication</a>
+
+        <br>
+        <a href="/medications" class="btn btn-secondary mt-3">Back to Medications List</a>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
